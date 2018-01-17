@@ -1,6 +1,7 @@
 package sm.fr.advancedlayoutapp;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -86,8 +87,8 @@ public class DrawerActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
             navigateToFragment(new RandomUserFragment());
         } else if (id == R.id.nav_manage) {
-
-
+            Intent mapIntention = new Intent(this, MapsActivity.class);
+            startActivity(mapIntention);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
